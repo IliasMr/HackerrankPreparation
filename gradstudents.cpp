@@ -18,7 +18,8 @@ vector<int> gradingStudents(vector<int> grades) {
     int i;
 
     for (i=0; i < grades.size(); i++){
-        //if ()
+        //if ()  pr
+        //
 
     }
 
