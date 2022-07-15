@@ -15,13 +15,19 @@ string rtrim(const string &);
  */
 
 vector<int> gradingStudents(vector<int> grades) {
-    int i;
+    int i,round;
 
     for (i=0; i < grades.size(); i++){
-        //if ()  pr
-        //
+        
+        round = ((grades[i] +4) / 5) * 5;
+
+        
+        if (round - grades[i] < 3 && grades[i] >= 38)
+            grades[i] =  round;              //round up
 
     }
+
+    return grades;
 
 }
 
