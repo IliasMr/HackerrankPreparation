@@ -15,18 +15,19 @@ vector<string> split(const string &);
 
 vector<int> countingSort(vector<int> arr) {
 
+  
     vector<int> freq(100, 0);
 
-    int i,j;
-    for (i=0; i< 100; i++){
-        for (j=0;j<100;j++){
-            if (i == arr[j])
-                freq[i]++;
+    int i,j, index;
+    
         
-        }
-
-
-
+    for (i=0; i< arr.size(); i++){
+        
+        index = arr[i];
+        
+        freq[index]++;
+        
+        
     }
 
     return freq;
