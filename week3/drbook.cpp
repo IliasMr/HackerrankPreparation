@@ -28,8 +28,10 @@ int pageCount(int n, int p) {
 
     if (p == 1 || p == n)
         return 0;
-    else if (n - p == 1 && p!=1 && p != n) 
+    
+    else if (n-p == 1 && p%2 != 0)
         return 1;
+    
     else if (turns1 < turns2)
         return turns1;
     else    
