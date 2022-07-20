@@ -34,6 +34,8 @@ int sockMerchant(int n, vector<int> ar) {
 
    }
 
+   return pairs;
+
 
 }
 

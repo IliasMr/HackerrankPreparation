@@ -15,9 +15,41 @@ vector<string> split(const string &);
 
 vector<int> maximumPerimeterTriangle(vector<int> sticks) {
 
-    
+
+    sort(sticks.begin(), sticks.end(), greater<int>());
 
 
+    vector<int> pairs;
+
+    for (int i=0; i<sticks.size() - 2; i++){
+
+        if (sticks[i+1]+sticks[i+2]>sticks[i]){                      //non - degenerate triangle           
+            pairs.push_back(sticks[i]);
+            pairs.push_back(sticks[i+1]);
+            pairs.push_back(sticks[i+2]);
+        }  
+
+    }
+ 
+    if (pairs.empty()){
+      
+       vector<int> notpair;
+       notpair.push_back(-1);
+
+       return notpair;
+    }
+    else{
+        
+        vector<int> maxtr;
+        
+        maxtr.push_back(pairs[2]);
+        maxtr.push_back(pairs[1]);
+        maxtr.push_back(pairs[0]);
+
+        return maxtr;
+
+    }
+        
 
 }
 
